@@ -11,6 +11,12 @@ namespace FoodJournal
             journal = new Dictionary<int, JournalEntry>();
         }
 
+        //read from txt (button clicked)
+        //^^ if txt is incorrect then tell user, call view
+
+
+        
+
        
     }
 }

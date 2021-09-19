@@ -45,8 +45,99 @@ namespace FoodJournal
             this.satisfaction = satisfaction;
         }
 
+        /// <summary>
+        /// Gets the id of an entry
+        /// </summary>
+        /// <returns></returns>
+        public int getID()
+        {
+            return ID;
+        }
 
+        /// <summary>
+        /// Gets the date of the entry
+        /// </summary>
+        /// <returns></returns>
+        public DateTime getDate()
+        {
+            return date;
+        }
 
+        /// <summary>
+        /// Gets the meal time 
+        /// ex. dinner
+        /// </summary>
+        /// <returns></returns>
+        public string getMealtime()
+        {
+            return mealtime;
+        }
 
+        /// <summary>
+        /// Gets the list of food for the entry
+        /// </summary>
+        /// <returns></returns>
+        public List<string> getFoodList()
+        {
+            return food;
+        }
+
+        /// <summary>
+        /// Sets the list of food 
+        /// </summary>
+        /// <param name="listOfFood"></param>
+        public void setFoodList(List<string> listOfFood)
+        {
+            this.food = listOfFood;
+        }
+
+        /// <summary>
+        /// Gets the symptoms for a meal
+        /// </summary>
+        /// <returns></returns>
+        public List<string> getSymptoms()
+        {
+            return symptoms;
+        }
+
+        /// <summary>
+        /// Sets the symptoms of a meal
+        /// </summary>
+        public void setSymptoms(List<string> symptoms)
+        {
+            this.symptoms = symptoms;
+        }
+
+        /// <summary>
+        /// Gets the healthiness of the meal
+        /// </summary>
+        /// <returns></returns>
+        public int getHealthiness() {
+            return healthiness;
+        }
+
+        /// <summary>
+        /// sets the healthiness
+        /// </summary>
+        /// <param name="healthiness"></param>
+        public void setHealthiness(int healthiness) {
+            this.healthiness = healthiness;
+        }
+
+        /// <summary>
+        /// Gets the satisfaction of a meal
+        /// </summary>
+        /// <returns></returns>
+        public int getSatisfaction() {
+            return satisfaction;
+        }
+
+        /// <summary>
+        /// Sets the satisfaction of a meal
+        /// </summary>
+        /// <param name="satisfaction"></param>
+        public void setSatisfaction(int satisfaction) {
+            this.satisfaction = satisfaction;
+        }
     }
 }
