@@ -76,6 +76,19 @@ namespace WindowsFormsApp1
             JournalEntry entry = new JournalEntry();
 
 
+            analysisBox.Text = "Out of the " + " entries you entered:\n" +
+                "You rated your food an average of " + userJournal.getHealth() + " for healthiness.\n" +
+                "You rated your food an average of " + userJournal.getSatisfaction() + " for satisfaction.\nThe meal most entries were entered for was ______.";
+
+
+
+
+                        userJournal.getHealth().ToString();
+
+        }
+
+        private void analysisBox_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

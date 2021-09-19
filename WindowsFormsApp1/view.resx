@@ -120,4 +120,11 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="analysisBox.Text" xml:space="preserve">
+    <value>Out of the 0 entries you entered:
+- You rated your food an average of 0 for healthiness.
+- You rated your food an average of 0 for satisfaction.
+- The meal most entries were entered for was ______.
+</value>
+  </data>
 </root>
