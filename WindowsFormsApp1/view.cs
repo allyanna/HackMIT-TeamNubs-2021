@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public view()
         {
             InitializeComponent();
+
         }
 
 
@@ -35,6 +36,7 @@ namespace WindowsFormsApp1
         /// <param name="e"></param>
         private void enterButton_Click(object sender, EventArgs e)
         {
+           
 
         }
     }
