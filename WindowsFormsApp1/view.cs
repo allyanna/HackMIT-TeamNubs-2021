@@ -19,12 +19,12 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             userJournal = new Journal();
-           mealComboBox.SelectedIndex = 0;
+            mealComboBox.SelectedIndex = 0;
             healthinessComboBox.SelectedIndex = 0;
             satisfactionComboBox.SelectedIndex = 0;
         }
 
-   
+
         /// <summary>
         /// Calls the controller to upload the new inputs
         /// </summary>
@@ -46,18 +46,66 @@ namespace WindowsFormsApp1
             int newID = 0; //TODO
 
             int healthiness = 0;
-            int satisfaction = 0;
 
-            //DateTime data = (DateTime)"09/02/2021";
+            if (healthinessComboBox.SelectedIndex == 0)
+                healthiness = 10;
+            else if (healthinessComboBox.SelectedIndex == 1)
+                healthiness = 9;
+            else if (healthinessComboBox.SelectedIndex == 2)
+                healthiness = 8;
+            else if (healthinessComboBox.SelectedIndex == 3)
+                healthiness = 7;
+            else if (healthinessComboBox.SelectedIndex == 4)
+                healthiness = 6;
+            else if (healthinessComboBox.SelectedIndex == 5)
+                healthiness = 5;
+            else if (healthinessComboBox.SelectedIndex == 6)
+                healthiness = 4;
+            else if (healthinessComboBox.SelectedIndex == 7)
+                healthiness = 3;
+            else if (healthinessComboBox.SelectedIndex == 8)
+                healthiness = 2;
+            else if (healthinessComboBox.SelectedIndex == 9)
+                healthiness = 1;
 
-            //string mealTime;
+                int satisfaction = 0;
+
+            if (satisfactionComboBox.SelectedIndex == 0)
+                satisfaction = 10;
+            else if (satisfactionComboBox.SelectedIndex == 1)
+                satisfaction = 9;
+            else if (satisfactionComboBox.SelectedIndex == 2)
+                satisfaction = 8;
+            else if (satisfactionComboBox.SelectedIndex == 3)
+                satisfaction = 7;
+            else if (satisfactionComboBox.SelectedIndex == 4)
+                satisfaction = 6;
+            else if (satisfactionComboBox.SelectedIndex == 5)
+                satisfaction = 5;
+            else if (satisfactionComboBox.SelectedIndex == 6)
+                satisfaction = 4;
+            else if (satisfactionComboBox.SelectedIndex == 7)
+                satisfaction = 3;
+            else if (satisfactionComboBox.SelectedIndex == 8)
+                satisfaction = 2;
+            else 
+                satisfaction = 1;
+ 
+                    string mealTime = "Breakfast";
+
+            if (mealComboBox.SelectedIndex == 0)
+                mealTime = "Breakfast";
+            else if (mealComboBox.SelectedIndex == 1)
+                mealTime = "Lunch";
+            else if (mealComboBox.SelectedIndex == 2)
+                mealTime = "Dinner";
+            else 
+                mealTime = "Other";
 
             string[] foods = foodTextbox.Lines.Select(s => s.ToLowerInvariant()).ToArray();
             //foods.ToList();
 
             List<string> symptoms = new List<string>();
-            //todo
-            
 
             if (noneCheckBox.Checked == true)
                 symptoms.Add("none");
@@ -72,8 +120,9 @@ namespace WindowsFormsApp1
             if (stomachCheckBox.Checked == true)
                 symptoms.Add("stomach pain");
 
+            if (symptoms.Count == 0)
+                symptoms.Add("none");
 
-          
 
             JournalEntry entry = new JournalEntry();
 
