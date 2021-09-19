@@ -14,7 +14,16 @@ namespace FoodJournal
         //read from txt (button clicked)
         //^^ if txt is incorrect then tell user, call view
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="filename"></param>
+        public void readFiles(string filename) { 
+        //TODO: to tell user if it was successful or not
 
+
+        
+        }
         
 
        

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,21 +7,29 @@ using System.Threading.Tasks;
 
 namespace FoodJournal
 {
+    [JsonObject(MemberSerialization.OptIn)]
     public class JournalEntry
     {
         /*stores an id of the journal entry*/
+        [JsonProperty(PropertyName = "journalEntry")]
         private int ID;
         /*stores the date of entry*/
+        [JsonProperty(PropertyName = "date")]
         private DateTime date;
         /*mealtime ex. dinner*/
+        [JsonProperty(PropertyName = "mealtime")]
         private string mealtime;
         /*list of foods*/
+        [JsonProperty(PropertyName = "food")]
         private List<string> food;
         /*symptoms for meal*/
+        [JsonProperty(PropertyName = "symptoms")]
         private List<string> symptoms;
         /*personal rating of healthiness*/
+        [JsonProperty(PropertyName = "healthiness")]
         private int healthiness;
         /*personal rating of satisfaction*/
+        [JsonProperty(PropertyName = "satisfaction")]
         private int satisfaction;
 
         /// <summary>
@@ -28,7 +37,7 @@ namespace FoodJournal
         /// </summary>
         public JournalEntry()
         {
-
+            //TODO: defaults?
         }
 
         /// <summary>
