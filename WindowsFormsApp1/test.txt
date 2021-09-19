@@ -1,0 +1,18 @@
+﻿[
+	{	"ID": "1",
+		"date": "09/11/2000",
+		"mealtime": "breakfast",
+		"food": ["bagels"],
+		"symptoms": ["IBS"],
+		"healthiness": "9",
+		"satisfaction": "7"
+	}
+	{	"ID": "2",
+		"date": "01/28/2002",
+		"mealtime": "dinner",
+		"food": ["sandwich"],
+		"symptoms": ["bloating"],
+		"healthiness": "9",
+		"satisfaction": "10"
+	}
+]
