@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using Newtonsoft.Json;
 
 namespace FoodJournal
 {
@@ -25,7 +25,7 @@ namespace FoodJournal
             using (StreamReader sr = new StreamReader(filename))
             {
                 string json = sr.ReadToEnd();
-                List<string> entries = JsonConvert.DeserializeObject<List<JournalEntry>>(json);
+                List<JournalEntry> entries = JsonConvert.DeserializeObject<List<JournalEntry>>(json);
             }
 
         
