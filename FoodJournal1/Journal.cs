@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace FoodJournal
 {
-    public class FoodJournal
+    public class Journal
     {
         private Dictionary<int, JournalEntry> journal;
-        public FoodJournal()
+        public Journal()
         {
             journal = new Dictionary<int, JournalEntry>();
         }
@@ -20,7 +22,11 @@ namespace FoodJournal
         /// <param name="filename"></param>
         public void readFiles(string filename) { 
         //TODO: to tell user if it was successful or not
-
+            using (StreamReader sr = new StreamReader(filename))
+            {
+                string json = sr.ReadToEnd();
+                List<string> entries = JsonConvert.DeserializeObject<List<JournalEntry>>(json);
+            }
 
         
         }

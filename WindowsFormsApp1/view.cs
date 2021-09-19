@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FoodJournal;
 
 namespace WindowsFormsApp1
 {
     public partial class view : Form
     {
+        private Journal journal;
+
         public view()
         {
             InitializeComponent();
-
+            journal = new Journal();
         }
 
 
@@ -27,6 +30,7 @@ namespace WindowsFormsApp1
         private void uploadButton_Click(object sender, EventArgs e)
         {
 
+            journal.readFiles("test.txt");
         }
 
         /// <summary>

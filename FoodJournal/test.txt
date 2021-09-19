@@ -1,0 +1,10 @@
+﻿[
+	{	"ID": "1",
+		"date": "09/11/2000",
+		"mealtime": "breakfast",
+		"food": ["deez nuts"],
+		"symptoms": ["IBS"],
+		"healthiness": "9",
+		"satisfaction": "7"
+	}
+]
