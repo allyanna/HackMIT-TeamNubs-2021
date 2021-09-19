@@ -7,11 +7,16 @@ namespace FoodJournal
 {
     public class Journal
     {
-        private Dictionary<int, JournalEntry> journal;
+        public Dictionary<int, JournalEntry> journal { get; set; }
+        private int jID;
         public Journal()
         {
             journal = new Dictionary<int, JournalEntry>();
+            jID = 0;
         }
+
+
+
 
         //read from txt (button clicked)
         //^^ if txt is incorrect then tell user, call view

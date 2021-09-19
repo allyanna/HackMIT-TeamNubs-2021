@@ -41,12 +41,12 @@ namespace WindowsFormsApp1
             this.healthinessComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.noneCheckBox = new System.Windows.Forms.CheckBox();
+            this.constipationCheckBox = new System.Windows.Forms.CheckBox();
+            this.diarrheaCheckBox = new System.Windows.Forms.CheckBox();
+            this.vomitCheckBox = new System.Windows.Forms.CheckBox();
+            this.bloatCheckBox = new System.Windows.Forms.CheckBox();
+            this.stomachCheckBox = new System.Windows.Forms.CheckBox();
             this.foodTextbox = new System.Windows.Forms.TextBox();
             this.foodLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
             // uploadButton
             // 
             this.uploadButton.Location = new System.Drawing.Point(369, 1035);
-            this.uploadButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uploadButton.Margin = new System.Windows.Forms.Padding(4);
             this.uploadButton.Name = "uploadButton";
             this.uploadButton.Size = new System.Drawing.Size(385, 64);
             this.uploadButton.TabIndex = 0;
@@ -71,14 +71,14 @@ namespace WindowsFormsApp1
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1289, 49);
+            this.menuStrip1.Size = new System.Drawing.Size(1289, 60);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(104, 45);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(104, 56);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // enterButton
@@ -106,6 +106,7 @@ namespace WindowsFormsApp1
             // 
             // mealComboBox
             // 
+            this.mealComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mealComboBox.FormattingEnabled = true;
             this.mealComboBox.Items.AddRange(new object[] {
             "Breakfast",
@@ -137,6 +138,7 @@ namespace WindowsFormsApp1
             // 
             // satisfactionComboBox
             // 
+            this.satisfactionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.satisfactionComboBox.FormattingEnabled = true;
             this.satisfactionComboBox.Items.AddRange(new object[] {
             "10",
@@ -156,6 +158,7 @@ namespace WindowsFormsApp1
             // 
             // healthinessComboBox
             // 
+            this.healthinessComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.healthinessComboBox.FormattingEnabled = true;
             this.healthinessComboBox.Items.AddRange(new object[] {
             "10",
@@ -191,65 +194,65 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 14;
             this.label1.Text = "Check All Symptoms:";
             // 
-            // checkBox1
+            // noneCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(734, 551);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(117, 36);
-            this.checkBox1.TabIndex = 15;
-            this.checkBox1.Text = "none";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.noneCheckBox.AutoSize = true;
+            this.noneCheckBox.Location = new System.Drawing.Point(734, 551);
+            this.noneCheckBox.Name = "noneCheckBox";
+            this.noneCheckBox.Size = new System.Drawing.Size(117, 36);
+            this.noneCheckBox.TabIndex = 15;
+            this.noneCheckBox.Text = "none";
+            this.noneCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // constipationCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(734, 593);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(207, 36);
-            this.checkBox2.TabIndex = 16;
-            this.checkBox2.Text = "constipation";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.constipationCheckBox.AutoSize = true;
+            this.constipationCheckBox.Location = new System.Drawing.Point(734, 593);
+            this.constipationCheckBox.Name = "constipationCheckBox";
+            this.constipationCheckBox.Size = new System.Drawing.Size(207, 36);
+            this.constipationCheckBox.TabIndex = 16;
+            this.constipationCheckBox.Text = "constipation";
+            this.constipationCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // diarrheaCheckBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(734, 635);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(158, 36);
-            this.checkBox3.TabIndex = 17;
-            this.checkBox3.Text = "diarrhea";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.diarrheaCheckBox.AutoSize = true;
+            this.diarrheaCheckBox.Location = new System.Drawing.Point(734, 635);
+            this.diarrheaCheckBox.Name = "diarrheaCheckBox";
+            this.diarrheaCheckBox.Size = new System.Drawing.Size(158, 36);
+            this.diarrheaCheckBox.TabIndex = 17;
+            this.diarrheaCheckBox.Text = "diarrhea";
+            this.diarrheaCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // vomitCheckBox
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(734, 677);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(160, 36);
-            this.checkBox4.TabIndex = 18;
-            this.checkBox4.Text = "vomiting";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.vomitCheckBox.AutoSize = true;
+            this.vomitCheckBox.Location = new System.Drawing.Point(734, 677);
+            this.vomitCheckBox.Name = "vomitCheckBox";
+            this.vomitCheckBox.Size = new System.Drawing.Size(160, 36);
+            this.vomitCheckBox.TabIndex = 18;
+            this.vomitCheckBox.Text = "vomiting";
+            this.vomitCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // bloatCheckBox
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(955, 551);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(155, 36);
-            this.checkBox5.TabIndex = 19;
-            this.checkBox5.Text = "bloating";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.bloatCheckBox.AutoSize = true;
+            this.bloatCheckBox.Location = new System.Drawing.Point(955, 551);
+            this.bloatCheckBox.Name = "bloatCheckBox";
+            this.bloatCheckBox.Size = new System.Drawing.Size(155, 36);
+            this.bloatCheckBox.TabIndex = 19;
+            this.bloatCheckBox.Text = "bloating";
+            this.bloatCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // stomachCheckBox
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(955, 593);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(222, 36);
-            this.checkBox6.TabIndex = 20;
-            this.checkBox6.Text = "stomach pain";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.stomachCheckBox.AutoSize = true;
+            this.stomachCheckBox.Location = new System.Drawing.Point(955, 593);
+            this.stomachCheckBox.Name = "stomachCheckBox";
+            this.stomachCheckBox.Size = new System.Drawing.Size(222, 36);
+            this.stomachCheckBox.TabIndex = 20;
+            this.stomachCheckBox.Text = "stomach pain";
+            this.stomachCheckBox.UseVisualStyleBackColor = true;
             // 
             // foodTextbox
             // 
@@ -275,12 +278,12 @@ namespace WindowsFormsApp1
             this.ClientSize = new System.Drawing.Size(1289, 1165);
             this.Controls.Add(this.foodLabel);
             this.Controls.Add(this.foodTextbox);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.stomachCheckBox);
+            this.Controls.Add(this.bloatCheckBox);
+            this.Controls.Add(this.vomitCheckBox);
+            this.Controls.Add(this.diarrheaCheckBox);
+            this.Controls.Add(this.constipationCheckBox);
+            this.Controls.Add(this.noneCheckBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.healthinessComboBox);
@@ -293,7 +296,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.uploadButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "view";
             this.Text = "Food Journal";
             this.menuStrip1.ResumeLayout(false);
@@ -317,14 +320,14 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ComboBox healthinessComboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox constipationCheckBox;
+        private System.Windows.Forms.CheckBox diarrheaCheckBox;
+        private System.Windows.Forms.CheckBox vomitCheckBox;
+        private System.Windows.Forms.CheckBox bloatCheckBox;
+        private System.Windows.Forms.CheckBox stomachCheckBox;
         private System.Windows.Forms.TextBox foodTextbox;
         private System.Windows.Forms.Label foodLabel;
+        private System.Windows.Forms.CheckBox noneCheckBox;
     }
 }
 

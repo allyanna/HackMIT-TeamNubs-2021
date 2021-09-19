@@ -13,12 +13,16 @@ namespace WindowsFormsApp1
 {
     public partial class view : Form
     {
-        private Journal journal;
+        private Journal userJournal;
 
         public view()
         {
             InitializeComponent();
-            journal = new Journal();
+            userJournal = new Journal();
+            /*mealComboBox.SelectedIndex = 0;
+            healthinessComboBox.SelectedIndex = 0;
+            satisfactionComboBox.SelectedIndex = 0;*/
+            
         }
 
 
@@ -30,7 +34,7 @@ namespace WindowsFormsApp1
         private void uploadButton_Click(object sender, EventArgs e)
         {
 
-            journal.readFiles("test.txt");
+            userJournal.readFiles("test.txt");
         }
 
         /// <summary>
@@ -40,7 +44,38 @@ namespace WindowsFormsApp1
         /// <param name="e"></param>
         private void enterButton_Click(object sender, EventArgs e)
         {
-           
+            int newID = 0; //TODO
+
+            //DateTime data = (DateTime)"09/02/2021";
+
+            //string mealTime;
+
+
+
+            List<string> symptoms = new List<string>();
+
+            
+
+            if (noneCheckBox.Checked == true)
+                symptoms.Add("none");
+            if (constipationCheckBox.Checked == true)
+                symptoms.Add("constipation");
+            if (diarrheaCheckBox.Checked == true)
+                symptoms.Add("diarrhea");
+            if (vomitCheckBox.Checked == true)
+                symptoms.Add("vomiting");
+            if (bloatCheckBox.Checked == true)
+                symptoms.Add("bloating");
+            if (stomachCheckBox.Checked == true)
+                symptoms.Add("stomach pain");
+
+
+            int healthiness = 0;
+            int satisfaction;
+
+            JournalEntry entry = new JournalEntry();
+
+
 
         }
     }
