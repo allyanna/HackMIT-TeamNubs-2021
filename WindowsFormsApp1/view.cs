@@ -19,13 +19,12 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             userJournal = new Journal();
-            /*mealComboBox.SelectedIndex = 0;
+           mealComboBox.SelectedIndex = 0;
             healthinessComboBox.SelectedIndex = 0;
-            satisfactionComboBox.SelectedIndex = 0;*/
-            
+            satisfactionComboBox.SelectedIndex = 0;
         }
 
-
+   
         /// <summary>
         /// Calls the controller to upload the new inputs
         /// </summary>
@@ -46,14 +45,18 @@ namespace WindowsFormsApp1
         {
             int newID = 0; //TODO
 
+            int healthiness = 0;
+            int satisfaction = 0;
+
             //DateTime data = (DateTime)"09/02/2021";
 
             //string mealTime;
 
-
+            string[] foods = foodTextbox.Lines.Select(s => s.ToLowerInvariant()).ToArray();
+            //foods.ToList();
 
             List<string> symptoms = new List<string>();
-
+            //todo
             
 
             if (noneCheckBox.Checked == true)
@@ -70,13 +73,25 @@ namespace WindowsFormsApp1
                 symptoms.Add("stomach pain");
 
 
-            int healthiness = 0;
-            int satisfaction;
+          
 
             JournalEntry entry = new JournalEntry();
 
 
 
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StringBuilder helpText = new StringBuilder();
+            helpText.Append("How to enter an entry:\n");
+            helpText.Append("To select your meal:   select an item from the dropdown\n");
+            helpText.Append("To rate the healthiness of your food:  select a number from the dropdown\n");
+            helpText.Append("To rate how satisfied you were with your food: select a number from the droptown\n");
+            helpText.Append("To pick your symptoms: check all that apply\n");
+            helpText.Append("To input foods you had for the meal: Add a food item on each individual line\n");
+
+            MessageBox.Show(helpText.ToString(), "Help", MessageBoxButtons.OK);
         }
     }
 }

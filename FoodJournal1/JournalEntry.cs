@@ -13,9 +13,6 @@ namespace FoodJournal
         /*stores an id of the journal entry*/
         [JsonProperty(PropertyName = "journalEntry")]
         private int ID;
-        /*stores the date of entry*/
-        [JsonProperty(PropertyName = "date")]
-        private DateTime date;
         /*mealtime ex. dinner*/
         [JsonProperty(PropertyName = "mealtime")]
         private string mealtime;
@@ -41,12 +38,12 @@ namespace FoodJournal
         }
 
         /// <summary>
-        /// ID, date, mealtime, food, symptoms, healthiness, satisfaction
+        /// ID, mealtime, food, symptoms, healthiness, satisfaction
         /// </summary>
-        public JournalEntry(int ID, DateTime date, string mealtime, List<string> food, List<string> symptoms, int healthiness, int satisfaction)
+        public JournalEntry(int ID, string mealtime, List<string> food, List<string> symptoms, int healthiness, int satisfaction)
         {
             this.ID = ID;
-            this.date = date;
+       
             this.mealtime = mealtime;
             this.food = food;
             this.symptoms = symptoms;
@@ -63,14 +60,6 @@ namespace FoodJournal
             return ID;
         }
 
-        /// <summary>
-        /// Gets the date of the entry
-        /// </summary>
-        /// <returns></returns>
-        public DateTime getDate()
-        {
-            return date;
-        }
 
         /// <summary>
         /// Gets the meal time 
